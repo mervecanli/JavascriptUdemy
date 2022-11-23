@@ -27,5 +27,5 @@
 ##### BOLUM 3'e ait görsel aşağıdadır. Bu bölümde araba slider uygulaması yapılmıştır. Her resim belirlenen sürede kendisi değişmektedir veya yön okları ile de kullanıcı değiştirebilmektedir.
 ![BOLUM3](https://user-images.githubusercontent.com/53443432/203632311-8dac1afc-ce96-492c-8c57-c14f909e24b2.PNG)
 
-##### BOLUM 2'ye ait görsel aşağıdadır. Bu bölümde todo uygulamsı yapılmıştır. Girilen todo silinebilir, güncellenebilir. Todo'lara filtre uygulanabilir.
+##### BOLUM 2'ye ait görsel aşağıdadır. Bu bölümde todo uygulaması yapılmıştır. Girilen todo silinebilir, güncellenebilir. Todo'lara filtre uygulanabilir.
 ![BOLUM2](https://user-images.githubusercontent.com/53443432/203632328-2b2237f7-0c78-4ff8-b1c3-039d1482c971.PNG)
