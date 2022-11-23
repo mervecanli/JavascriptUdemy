@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="orn1"></p>
+    <p id="orn2"></p>
+    <p class="main"></p>
+    <p class="main"></p>
+    <p class="main"></p>
+    <div class="main"></div>
+    <h1 id="orn3">Old Heading</h1>
+    <img id="myImage" src="smiley.gif"></img>
+    <h6 id="date"></h6>
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Submit2</button>
+    <p id="demo"></p>
+
+    <form name="requiredExamp." action="" method="post">
+        <input type="text" name="fname" required />
+        <input type="submit" value="Submit" />
+    </form>
+
+
+    <p id="p2">Hello!</p>
+
+
+    <h1 id="h1">My heading</h1>
+    <button type="button" onclick="document.getElementById('h1').style.color='blue'">Change the color of heading</button>
+
+    <script>
+
+        document.getElementById("orn1");
+        document.getElementsByTagName("p");
+        document.getElementsByClassName("main");
+        document.querySelectorAll("p.main");
+        document.getElementById("orn1").innerHTML="mrv";
+        const element = document.getElementById("orn3");
+        element.innerHTML="New Heading"
+        document.getElementById("myImage").src="landscape.jpg";
+        document.getElementById("date").innerHTML="Date: " + Date();
+        document.write(Date()) // Never use document.write() after the document is loaded. It will overwrite the document.
+
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if(x=="") {
+                alert("name must be filled out");
+                return false;
+            }
+        }
+
+        function myFunction() {
+            let inputValue = document.getElementById("numb").value;
+            let text;
+            if(isNaN(inputValue) || inputValue<1 || inputValue>10) {
+                text = "input not valid";
+            } else {
+                text= 'input ok'
+            }
+            document.getElementById("demo").innerHTML=text;
+        }
+
+        document.getElementById("p2").style.color='red'
+
+
+    </script>
+</body>
+</html>

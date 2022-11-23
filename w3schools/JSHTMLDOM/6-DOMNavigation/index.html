@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="demo">Document</title>
+</head>
+<body>
+
+    <h1 id="id1">My first page</h1>
+    <h1 id="id1">My first page</h1>
+
+    <p id="id2"></p>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <p id="prg"></p>
+
+    <p id="prg1"></p>
+  
+
+   
+    <script>
+        myTitle = document.getElementById("demo").innerHTML;
+        console.log(myTitle)
+
+        myTitleAgain = document.getElementById("demo").firstChild.nodeValue;
+        console.log(myTitleAgain)
+
+        myTitleAgainAndAgain = document.getElementById("demo").childNodes[0].nodeValue;
+        console.log(myTitleAgainAndAgain);
+
+        // document.getElementById('id2').innerHTML = document.getElementById('id1').innerHTML;
+        // document.getElementById("id2").innerHTML = document.getElementById('id1').childNodes[0].nodeValue;
+        // document.getElementById('id2').innerHTML = document.getElementById('id1').firstChild.nodeValue;
+
+        // document.getElementById("prg").innerHTML = document.body.innerHTML;
+        document.getElementById("prg").innerHTML = document.documentElement.innerHTML;
+
+        document.getElementById("prg1").innerHTML = document.getElementById("id1").nodeName;
+
+        document.getElementById("prg1").innerHTML = document.getElementById("id1").nodeType;
+
+
+    </script>
+</body>
+</html>

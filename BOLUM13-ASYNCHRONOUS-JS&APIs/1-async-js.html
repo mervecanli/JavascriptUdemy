@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Save</button>
+
+    <script>
+
+        // sync
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+
+
+        // async
+        console.log(1);
+        setTimeout(() => {
+            console.log(2);
+        }, 2000);
+        console.log(3);
+
+        document.getElementById("btn").addEventListener("click", () => {
+            console.log("saved");
+        });
+
+        // server üzerinden herhangi bir bilgi alınması istendiği zaman async bir işlem başlatılması gerekir. 
+        // async olarak başlatılan bir işlemin ne zaman sonlandırılacağı belli değil.
+        // ancak async bir işlemin bittiği anda da diğer işlemin başlatılabilmesi için de belli önlemlerin alınması gerekir.
+        // bu önlemler;
+        // callback, promise, async-await
+
+    </script>
+    
+</body>
+</html>

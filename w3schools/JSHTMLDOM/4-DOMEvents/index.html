@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 120px;
+            height: 100px;
+            background-color: fuchsia;
+            color: aliceblue;
+            padding: 40px
+        }
+    </style>
+</head>
+<body onload="checkCookies()">
+
+    <h2 onclick="this.innerHTML='Oppss!'">Click on this text!</h2>
+    <h2 onclick="changeText(this)">Click on this text2!</h2>
+
+    <button onclick="displayDate()">the time is?</button>
+    <p id="date"></p>
+
+    <button id="myDisplayButton">display date</button>
+    <p id="aa"></p>
+
+    <p id="cookies"></p>
+
+    <div>
+        Enter your name: <input type="text" id="fname" onchange="uppercase()">
+    </div>
+
+    <div id="container" onmouseover="mOver(this)" onmouseout="mOut(this)"> Mouse Over Me</div>
+    <br/><br/><br/>
+    <div id="container" onmousedown="mDown(this)" onmouseup="mUp(this)" onclick="mClick()"> Click me Me</div>
+
+
+    <script>
+        function changeText(id){
+            id.innerHTML="Opssss!";
+        }
+
+        function displayDate() {
+            document.getElementById("date").innerHTML=Date();
+        }
+
+        document.getElementById("myDisplayButton").onclick = displayDate2;
+
+        function displayDate2() {
+            document.getElementById("aa").innerHTML = Date();
+        }
+
+        function checkCookies() {
+            let text;
+            if(navigator.cookieEnabled) {
+                text="Cookies are enabled"
+            } else {
+                text = "cookies are not enabled";
+            }
+            document.getElementById("cookies").innerHTML=text;
+        }
+
+        function uppercase() {
+            const input = document.getElementById("fname");
+            input.value = input.value.toUpperCase();
+        }
+
+        function mOver(id) {
+            id.innerHTML="onmouseover";
+        }
+
+        function mOut(id) {
+            id.innerHTML="onmouseout";
+        }
+
+        function mDown(id) {
+            id.innerHTML="onmousedown";
+            id.style.color="blue";
+        }
+
+        function mUp(id) {
+            id.innerHTML="onmouseup";
+            id.style.color="green";
+        }
+
+        function mClick() {
+            alert("clicked")
+        }
+
+    </script>
+</body>
+</html>

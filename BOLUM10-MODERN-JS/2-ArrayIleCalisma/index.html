@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Diziler</title>
+</head>
+<body>
+
+    <script>
+        
+        const sayilar=[1,5,7,3,2,67];
+
+        // I. YONTEM
+        // const tekSayilar=[];
+        // for(let sayi of sayilar) {
+        //     if(sayi%2==1) {
+        //         tekSayilar.push(sayi);
+        //     }
+        // }
+        // console.log(tekSayilar);
+
+
+        // II.YONTEM
+        const tekSayiKontrol = (sayi) => sayi%2==1;
+        const tekSayilar = sayilar.filter(tekSayiKontrol);
+        console.log(tekSayilar);
+
+
+        // III.YONTEM
+        const tekSayilar2 = sayilar.filter((sayi) => sayi%2==1);
+        console.log(tekSayilar2); //  [1, 5, 7, 3, 67]
+
+
+        // IV. YONTEM
+        const tekSayilar3 = sayilar.map((sayi) => sayi%2==1);
+        console.log(tekSayilar3); // [true, true, true, true, false, true]
+
+
+
+        const urunler = [
+            {urunAdi: "iphone 11", fiyat:11000},
+            {urunAdi: "iphone 12", fiyat:12000},
+            {urunAdi: "iphone 13", fiyat:13000},
+            {urunAdi: "iphone 14", fiyat:14000}
+        ];
+
+        const urunFilter = urunler.filter(urun => urun.fiyat);
+        console.log("skqls => ", urunFilter);
+        console.log(urunler.filter(urun => urun.fiyat>12000));
+
+        const urunMap = urunler.map(urun => urun.fiyat);
+        console.log(urunMap);
+
+
+
+        // const filtrelenenUrunler = urunler.filter(urun => urun.fiyat>12000);
+        // const sonuc = filtrelenenUrunler.map(fUrun => fUrun.urunAdi);
+        const sonuc = urunler.filter(urun => urun.fiyat>12000).map(item => item.urunAdi);
+        console.log(sonuc);
+
+        const result = urunler.find(item => item.fiyat>12000); // 12000'den büyük olan BULDUĞU SADECE İLK DEĞERİN kendisini döndürür.
+        console.log(result); // {urunAdi: 'iphone 13', fiyat: 13000}
+
+        const resultIndex = urunler.findIndex(item => item.fiyat>12000); // 12000'den büyük olan BULDUĞU SADECE İLK DEĞERİN INDEX'INI döndürür.
+        console.log(resultIndex); // 2
+
+    </script>
+    
+</body>
+</html>

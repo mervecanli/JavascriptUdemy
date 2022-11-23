@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+<body>
+
+    <script>
+        
+        // const sayilar = new Set([1,2,3]);
+        const sayilar = new Set();
+        sayilar.add(1);
+        sayilar.add(2);
+        sayilar.add(3);
+        sayilar.add("4");
+        sayilar.add(3); // elements in the set must be unique
+
+
+        console.log(sayilar);
+        console.log(...sayilar);
+        const dizi = [...sayilar]; // you can convert set to an array.  set => size, array => length
+        console.log(dizi);
+
+        sayilar.delete(1);
+        console.log(sayilar);
+        console.log(sayilar.has(1)); // return false
+        // sayilar.clear();
+
+        console.log(sayilar.values());
+        for(let x of sayilar.values()) {
+            console.log(x);
+        }
+        for(let x of sayilar){ // its same the above example. 
+            console.log(x);    // There is no any difference between sayilar and sayilar.values() in Set()
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="getdate" onclick="getdate2()">Get date</button>
+    <!-- <button id="getdate" onclick="getdate2()">Get date</button> -->
+    <p id="txt"></p>
+
+    <button id="alert">Try it!</button>
+
+    <button id="multEvents">Multiple Events</button>
+
+    <button id="myBtn">Try try it</button>
+    <p id="result"></p>
+
+    <p id="resize"></p>
+
+    <button id="myBtnCrp">Çarp</button>
+    <p id="carpim"></p>
+
+   
+    <script>
+        // I.Yol
+        // document.getElementById("getdate").onclick = getDate;
+        // function getDate() {
+        //     document.getElementById("txt").innerHTML = Date();
+        // }
+
+
+        // II. Yol
+        // function getdate2() {
+        //     document.getElementById("txt").innerHTML = Date();
+        // }
+
+
+        // III. Yol
+        document.getElementById('getdate').addEventListener("click", getdate3);
+        function getdate3() {
+            document.getElementById("txt").innerHTML = Date();        
+        }
+
+
+        // document.getElementById("alert").addEventListener("click", function() {
+        //     alert("tıklandı");
+        // });
+
+        document.getElementById("alert").addEventListener("click", callAlert);
+        function callAlert() {
+            alert("tıklandı")
+        }
+
+        document.getElementById("multEvents").addEventListener("click", func1);
+        document.getElementById("multEvents").addEventListener("click", func2);
+        function func1() {
+            alert("this func1 is called")
+        }
+        function func2() {
+            alert("this func2 is also called")
+        }
+
+
+        let x = document.getElementById("myBtn");
+        x.addEventListener("mouseover", mOver);
+        x.addEventListener("click", mClick);
+        x.addEventListener("mouseout", mOut);
+
+        function mOver() {
+            document.getElementById("result").innerHTML += "Mouse OVER<br />";
+        }
+        function mClick() {
+            document.getElementById("result").innerHTML += "Mouse CLICK<br />";
+        }
+        function mOut() {
+            document.getElementById("result").innerHTML += "Mouse OUT<br />";
+        }
+
+        window.addEventListener("resize", function() {
+            document.getElementById("resize").innerHTML= Math.random();
+        });
+
+        document.getElementById("myBtnCrp").addEventListener("click", function(){
+            carp(6,3);
+        });
+
+        function carp(sayi1, sayi2) {
+            document.getElementById("carpim").innerHTML=sayi1*sayi2;
+        }
+
+    </script>
+</body>
+</html>

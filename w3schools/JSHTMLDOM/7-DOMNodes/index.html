@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div1">
+        <p id="id1">This is a parag.</p>
+        <p id="id2">This is another parag.</p>
+    </div>
+
+   
+    <script>
+        const pTag = document.createElement("p");
+
+        const newText = document.createTextNode("this is a new one.");
+        pTag.appendChild(newText);
+
+        const div1 = document.getElementById("div1");
+        div1.appendChild(pTag);
+
+
+        const pTag1 = document.createElement("p");
+        const newText1 = document.createTextNode("another another new one is in here!");
+        pTag1.appendChild(newText1);
+
+        const div11 = document.getElementById("div1");
+        div11.insertBefore(pTag1, document.getElementById("id1")); // insertBefore(kimi ekleyeceksin, kimden önce ekleyeceksin)
+
+        // document.getElementById("id2").remove();
+
+        const parent = document.getElementById("div1");
+        const child = document.getElementById("id1");
+        parent.removeChild(child);
+
+
+        const pTag2 = document.createElement("p");
+        const txt = document.createTextNode("This is exaple of replacing HTML Elements");
+        pTag2.appendChild(txt);
+
+        const parentElement = document.getElementById("div1"); 
+        const erasingValue = document.getElementById("id2");
+        parentElement.replaceChild(pTag2, erasingValue); // replaceChild(kimi ekleyeceksin, kimin yerine ekleyeceksin)
+
+
+        const myCollection = document.getElementsByTagName("p");
+        console.log(myCollection);
+        console.log(myCollection[1]);
+        console.log(myCollection.length);
+        for(let i=0; i<myCollection.length; i++) {
+            myCollection[i].style.color='red';
+        }
+
+        // Note that: 
+        // An HTMLCollection is NOT an array!
+        // An HTMLCollection may look like an array, but it is not.
+        // You can loop through the list and refer to the elements with a number (just like an array).
+        // However, you cannot use array methods like valueOf(), pop(), push(), or join() on an HTMLCollection.
+
+        console.log("***********");
+        const allPTags = document.querySelectorAll("p");
+        console.log(allPTags);
+        console.log(allPTags[1]);
+        console.log(allPTags.length);
+        for(let i=0; i<allPTags.length; i++){
+            allPTags[i].style.color="blue";
+        }
+
+
+    </script>
+</body>
+</html>
