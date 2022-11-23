@@ -9,7 +9,7 @@
 ##### BOLUM 11'e ait görsel aşağıdadır. Bu uygulama ile istenilen kursun fotoğrafını, adını ve eğitmenini ekleyebilir veya silebilirsiniz. Bu bölümde ES5 ve ES6 üzerinde çalışıldı.
 ![BOLUM11](https://user-images.githubusercontent.com/53443432/203632196-51197614-b1c4-4837-81f1-ad7c4014549c.PNG)
 
-##### BOLUM 9'a ait görsel aşağıdadır. Bu bölümde quiz uygulaması yapılmıştır. Her soru için belirlenen cevaplama süresi vardır. Süre sonun cevaplanmazsa sistem tarafından cevap işaretlenir ve puan alınamaz. Süre sonunda veya işaretleme işleminden sonra kullanıcıya bir sonraki soruya geçiş hakkı verilir. Quiz bittiğinde kullanıya doğru cevaplanan soruların sayısı gösterilir. 
+##### BOLUM 9'a ait görsel aşağıdadır. Bu bölümde quiz uygulaması yapılmıştır. Her soru için belirlenen cevaplama süresi vardır. Süre sonunda soru cevaplanmazsa sistem tarafından cevap işaretlenir ve puan alınamaz. Süre sonunda veya işaretleme işleminden sonra kullanıcıya bir sonraki soruya geçiş hakkı verilir. Quiz bittiğinde kullanıya doğru cevaplanan soruların sayısı gösterilir. 
 ![BOLUM9](https://user-images.githubusercontent.com/53443432/203632222-bd9299c9-41ce-4b37-8ae5-c771d190f122.PNG)
 
 ##### BOLUM 7'ye ait görsel aşağıdadır. Bu uygulamada adam asmaca oyunu yapılmıştır. Girilen hatalı harfler kullanıcıya gösterilmiştir. Aynı hatalı harfin birden fazla girildiği durumda kullanıcıya uyarı verilmiştir.
